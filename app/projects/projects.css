@@ -1,0 +1,26 @@
+@media (max-width: 850px) {
+    .project-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.projects-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.projects-title {
+    font-size: 70px;
+    margin: 20px;
+}
+
+.project-container {
+    width: 100vw;
+    height: fit-content;
+
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}

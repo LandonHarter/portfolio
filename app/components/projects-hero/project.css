@@ -1,0 +1,98 @@
+@media (max-width: 1200px) {
+
+    .project-example {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-desc {
+        align-items: center;
+        width: 70vw;
+    }
+
+    .project-image {
+        width: 90vw !important;
+    }
+
+    .project-desc h1 {
+        text-align: center;
+    }
+
+    .project-desc p {
+        width: 90vw !important;
+        text-align: center;
+    }
+
+}
+
+.project-example {
+    width: 100vw;
+    height: fit-content;
+
+    display: flex;
+    justify-content: center;
+
+    margin-bottom: 100px;
+
+    transition: all 150ms;
+}
+
+.project-image {
+    width: 40vw;
+    margin: 15px;
+
+    border: solid #e1e1e1 2px;
+    border-radius: 10px;
+
+    transition: all 150ms;
+}
+
+.project-desc {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    margin: 15px;
+
+    transition: all 150ms;
+}
+
+.project-desc h1 {
+    font-size: 45px;
+    margin: 15px;
+
+    transition: all 150ms;
+}
+
+.project-desc p {
+    width: 30vw;
+
+    font-size: 20px;
+    margin: 15px;
+
+    transition: all 150ms;
+}
+
+.project-desc button {
+    border: none;
+    border-radius: 20px;
+
+    background-color: var(--primary-color);
+    padding: 15px;
+    margin: 25px 15px 15px;
+
+    font-weight: 500;
+    font-size: 18px;
+
+    cursor: pointer;
+
+    transition: all 150ms;
+}
+
+.project-desc button:hover {
+    filter: brightness(0.9);
+}
+
+.project-desc button:active {
+    transform: scale(0.925);
+}
