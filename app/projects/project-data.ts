@@ -149,7 +149,7 @@ export default [
         name: "Unity Networking",
         desc: "A few scripts to make networking and multiplayer way easier. Multiplayer is way to hard with many concepts and code needed to implement just basic features. Unity Networking provides a high level API to make networking more fun.",
         img: "/projects/unitynet/ss.png",
-        link: "https://radiumengine.com",
+        link: "https://github.com/LandonHarter/UnityNetworking",
         tags: [
             {
                 tag: "csharp",
