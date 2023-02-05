@@ -36,7 +36,7 @@ export default function ProjectsHero() {
             )}
 
             <Link href="/projects">
-                <button className="all-projects-button">More Projects <svg className="button-arrow" width="10" height="10" viewBox="0 0 10 10" aria-hidden="true">
+                <button className="all-projects-button" onClick={() => window.location.href = "/projects"}>More Projects <svg className="button-arrow" width="10" height="10" viewBox="0 0 10 10" aria-hidden="true">
                     <g fillRule="evenodd">
                         <path className="arrow-line" d="M0 5h7"></path>
                         <path className="arrow-tip" d="M1 1l4 4-4 4"></path>
