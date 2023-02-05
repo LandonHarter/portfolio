@@ -117,6 +117,7 @@
     aspect-ratio: 1;
     height: 65px;
     transition: 100ms;
+    cursor: pointer;
 }
 
 .logo:active {
