@@ -32,14 +32,11 @@ export default function Header() {
         if (!mobile && mobileMenuOpen) setMobileMenuOpen(false);
     }, [mobile]);
 
-    const name = <h1>Landon Harter</h1>
-    const logo = <img src="/logo_transparent.png" className="logo" />
-
     return(
         <div className="header" id="header">
             <div className="nav">
                 <div className="left-nav nav-section">
-                    <Link href="/">{logo}</Link>
+                    <img src="/logo_transparent.png" onClick={() => window.location.href = "/"} className="logo" />
                 </div>
 
                 {mobile ? mobileNav(setMobileMenuOpen) : (isHome ? homeDesktopNav() : desktopNav())}
