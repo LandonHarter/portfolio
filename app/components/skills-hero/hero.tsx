@@ -56,7 +56,7 @@ export default function SkillsHero() {
                 </div>
                 <motion.div className="selected-skills">
                     {selectedSkills.map((skill) =>
-                        <motion.div key={skill.name} className="skill" transition={{duration: 0.2}} variants={fadeAnimation} initial="hidden" animate={skillsControl}>
+                        <motion.div key={skill.name} className="skill" transition={{duration: 0.6}} variants={fadeAnimation} initial="hidden" animate={skillsControl}>
                             <img src={skill.imgSrc} />
                             <p>{skill.name}</p>
                         </motion.div>
