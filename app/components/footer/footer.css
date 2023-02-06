@@ -12,7 +12,7 @@
 
 .socials-bar {
     display: grid;
-    grid-template-columns: repeat(4, 56px);
+    grid-template-columns: repeat(5, 56px);
     column-gap: 5px;
     align-items: center;
 
@@ -69,6 +69,13 @@
 }
 #medium:hover {
     background-color: #AF69EE;
+}
+
+#stackoverflow {
+    background-image: url("/social/stackoverflow.png");
+}
+#stackoverflow:hover {
+    background-color: #f48225;
 }
 
 .copyright {

@@ -15,6 +15,7 @@ export default function Footer() {
               <div className="social" id="mail" onClick={() => openPage("mailto:landonharter@outlook.com")} />
               <div className="social" id="twitter" onClick={() => openPage("https://twitter.com/harter_landon")} />
               <div className="social" id="medium" onClick={() => openPage("https://medium.com/@landonharter")} />
+              <div className="social" id="stackoverflow" onClick={() => openPage("https://stackoverflow.com/users/14927852/landon-harter")} />
           </div>
       </div>
             <div className="copyright">
