@@ -13,7 +13,7 @@ export default function ProjectHeroExample(props:any) {
 
                 <div className="project-button-container">
                     <Link href={props.link} target="_blank"><button>Visit Project</button></Link>
-                    <Link href={props.code} target="_blank"><button>View Code</button></Link>
+                    <Link href={props.code} target="_blank"><button>Source Code</button></Link>
                 </div>
             </div>
         </div>
