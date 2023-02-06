@@ -8,6 +8,12 @@
     .project-desc {
         align-items: center;
         width: 70vw;
+
+        overflow: visible;
+    }
+
+    .project-desc button {
+        white-space: nowrap;
     }
 
     .project-image {
