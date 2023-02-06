@@ -96,6 +96,9 @@
 
     cursor: pointer;
 
+    display: flex;
+    align-items: center;
+
     transition: all 150ms;
 }
 
@@ -105,6 +108,13 @@
 
 .project-desc button:active {
     transform: scale(0.925);
+}
+
+.img-button {
+    width: 30px;
+    margin-right: 5px;
+
+    background-color: transparent;
 }
 
 .project-button-container {
