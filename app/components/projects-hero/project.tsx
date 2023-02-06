@@ -11,7 +11,7 @@ export default function ProjectHeroExample(props:any) {
                 <h1>{props.name}</h1>
                 <p>{props.desc}</p>
 
-                <div>
+                <div className="project-button-container">
                     <Link href={props.link} target="_blank"><button>Visit Project</button></Link>
                     <Link href={props.code} target="_blank"><button>View Code</button></Link>
                 </div>

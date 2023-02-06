@@ -96,3 +96,9 @@
 .project-desc button:active {
     transform: scale(0.925);
 }
+
+.project-button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

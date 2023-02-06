@@ -11,8 +11,18 @@
     }
 
     .selected-skills {
-        width: 90vw !important;
+        width: 100vw !important;
         margin-right: 0 !important;
+    }
+
+    .skill img {
+        width: 30vw !important;
+        max-width: 100px;
+    }
+
+    .skill p {
+        width: 40vw;
+        max-width: 150px;
     }
 
     .skill-section {
