@@ -1,26 +1,46 @@
 'use client'
 
-import { AnimatePresence, motion } from 'framer-motion';
+import { AnimatePresence, motion, useAnimate } from 'framer-motion';
 import { usePathname } from 'next/navigation';
+import { useEffect, useState } from 'react';
 
 export default function PageTransition({ children }: { children: React.ReactNode }) {
     const pathname = usePathname();
+    const [scope, animate] = useAnimate();
+    const [pageLoaded, setPageLoaded] = useState(false);
+
+    async function pageAnimation() {
+        if (!pageLoaded) {
+            await animate(scope.current, {
+                opacity: 1,
+            });
+            setPageLoaded(true);
+            return;
+        }
+
+        await animate(scope.current, {
+            opacity: 1,
+            clipPath: 'polygon(0 50%, 50% 0, 100% 50%, 50% 100%)'
+        });
+        await animate(scope.current, {
+            opacity: 0,
+            clipPath: 'polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%)',
+        });
+        await animate(scope.current, {
+            opacity: 1,
+            clipPath: 'polygon(0 100%, 0 0, 100% 0, 100% 100%)'
+        });
+    }
+
+    useEffect(() => {
+        pageAnimation();
+    }, [pathname]);
 
     return (
-        <AnimatePresence mode='wait'>
+        <AnimatePresence initial={false} mode='wait'>
             <motion.div
-                key={pathname}
-                initial={{
-                    opacity: 0,
-                    clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0% 100%)'
-                }}
-                animate={{
-                    opacity: 1,
-                    clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0% 100%)',
-                }}
-                exit={{
-                    clipPath: "polygon(50% 0, 50% 0, 50% 100%, 50% 100%)"
-                }}
+                ref={scope}
+                style={{ opacity: 0 }}
                 transition={{
                     duration: 0.75,
                 }}
