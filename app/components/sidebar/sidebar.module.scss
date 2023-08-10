@@ -1,0 +1,85 @@
+.social_sidebar {
+    position: fixed;
+    bottom: 0;
+    left: 75px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact_sidebar {
+    position: fixed;
+    bottom: 0;
+    right: 75px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sidebar_bottom {
+    width: 2px;
+    height: 100px;
+
+    background-color: var(--text550);
+    border-radius: 10px;
+}
+
+.social {
+    width: 25px;
+    height: 25px;
+    margin: 0 0 30px 0;
+
+    stroke: var(--text550);
+    stroke-width: 2px;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+
+    --hover-transition: 0.2s ease-in-out;
+    transition: var(--hover-transition);
+    -o-transition: var(--hover-transition);
+    -ms-transition: var(--hover-transition);
+    -moz-transition: var(--hover-transition);
+    -webkit-transition: var(--hover-transition);
+}
+
+.social:hover {
+    stroke: var(--p500);
+    transform: translateY(-5px);
+}
+
+.social_stackoverflow {
+    stroke-width: 5px;
+}
+
+.social_devto {
+    width: calc((512/448) * 25px) !important;
+    height: 25px !important;
+    aspect-ratio: 512/448 !important;
+    stroke-width: 15px !important;
+}
+
+.email {
+    text-decoration: none;
+    color: var(--text500);
+
+    font-size: 16px;
+    font-weight: 500;
+
+    --hover-transition: 0.2s ease-in-out;
+    transition: var(--hover-transition);
+    -o-transition: var(--hover-transition);
+    -ms-transition: var(--hover-transition);
+    -moz-transition: var(--hover-transition);
+    -webkit-transition: var(--hover-transition);
+
+    transform: translateX(-50%);
+    rotate: 90deg;
+}
+
+.email:hover {
+    color: var(--p500);
+    transform: translateX(calc(-50% - 5px));
+    rotate: 90deg;
+}
