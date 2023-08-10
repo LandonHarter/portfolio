@@ -1,0 +1,67 @@
+.header {
+    width: 100vw;
+    min-height: 80px;
+    padding: 10px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    --section-margin: 15vw;
+}
+
+.header_left {
+    display: flex;
+    align-items: center;
+    margin-left: var(--section-margin);
+}
+
+.header_right {
+    display: flex;
+    align-items: center;
+    margin-right: var(--section-margin);
+}
+
+.logo {
+    margin-right: 10px;
+
+    --logo-active: 0.1s ease-in-out;
+    transition: scale var(--logo-active);
+    -o-transition: scale var(--logo-active);
+    -ms-transition: scale var(--logo-active);
+    -moz-transition: scale var(--logo-active);
+    -webkit-transition: scale var(--logo-active);
+}
+
+.logo:active {
+    scale: 0.95;
+}
+
+.nav {
+    margin-right: 100px;
+}
+
+.nav_ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+
+    list-style-type: none;
+}
+
+.nav_link {
+    margin: 0 30px;
+}
+
+.nav_link a {
+    color: var(--text500);
+    font-size: 24px;
+    font-weight: 900;
+    font-family: 'SF Pro Display';
+    text-decoration: none;
+}
+
+.nav_link_active a {
+    color: var(--p500);
+}

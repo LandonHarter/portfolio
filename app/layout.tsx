@@ -1,5 +1,7 @@
+import Header from '@components/header/header'
 import './globals.css'
 import type { Metadata } from 'next'
+import { ThemeContextProvider } from '@context/context'
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://landonharter.me'),
@@ -21,6 +23,7 @@ export const metadata: Metadata = {
   classification: 'Portfolio',
   creator: 'Landon Harter',
   applicationName: 'Landon Harter',
+  icons: 'https://landonharter.me/images/logos/logo-light.png',
   openGraph: {
     type: 'website',
     locale: 'en_US',
@@ -36,6 +39,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Landon Harter | Portfolio',
     description: 'Landon is a 16 year old developer based out of Michigan. He has a passion for building and creating with code.',
+    images: 'https://landonharter.me/images/logos/logo-light.png',
   },
 }
 
@@ -47,7 +51,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        {children}
+        <ThemeContextProvider>
+          <Header />
+          {children}
+        </ThemeContextProvider>
       </body>
     </html>
   )
