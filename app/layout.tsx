@@ -2,7 +2,6 @@ import Header from '@components/header/header'
 import './globals.css'
 import type { Metadata } from 'next'
 import { PageTransitionProvider, ThemeContextProvider } from '@context/context'
-import PageTransition from '@components/transition'
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://landonharter.me'),
