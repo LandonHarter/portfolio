@@ -18,7 +18,6 @@ export default function Home() {
         starColor: ['#ffffff'],
         quantity: 30,
       }} />
-
     </main>
   )
 }

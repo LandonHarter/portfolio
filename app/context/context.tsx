@@ -75,14 +75,12 @@ export function PageTransitionProvider({ children }: { children: React.ReactNode
 
     return (
         <PageTransitionContext.Provider value={pageAnimation1}>
-            <AnimatePresence initial={false} mode='wait'>
-                <motion.div ref={scope} style={{
-                    opacity: 0,
-                    clipPath: 'polygon(0 100%, 0 0, 100% 0, 100% 100%)'
-                }}>
-                    {children}
-                </motion.div>
-            </AnimatePresence>
+            <motion.div ref={scope} style={{
+                opacity: 0,
+                clipPath: 'polygon(0 100%, 0 0, 100% 0, 100% 100%)'
+            }}>
+                {children}
+            </motion.div>
         </PageTransitionContext.Provider>
     );
 }
