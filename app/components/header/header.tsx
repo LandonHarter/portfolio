@@ -5,10 +5,13 @@ import Image from 'next/image';
 import { useContext } from 'react';
 import ThemeContext from '@context/theme';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
+import PageTransitionContext from '@context/transition';
 
 export default function Header() {
+    const router = useRouter();
     const route = usePathname().split('/')[1];
+    const pushPageTransition = useContext(PageTransitionContext);
     const theme = useContext(ThemeContext);
 
     return (
@@ -22,7 +25,13 @@ export default function Header() {
                 <nav className={styles.nav}>
                     <ul className={styles.nav_ul}>
                         <li className={`${styles.nav_link} ${route === '' && styles.nav_link_active}`}>
-                            <Link href='/'>
+                            <Link href='/' onClick={(e) => {
+                                e.preventDefault();
+                                pushPageTransition();
+                                setTimeout(() => {
+                                    router.push('/');
+                                }, 750);
+                            }}>
                                 Home
                             </Link>
                         </li>

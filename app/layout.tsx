@@ -1,7 +1,7 @@
 import Header from '@components/header/header'
 import './globals.css'
 import type { Metadata } from 'next'
-import { ThemeContextProvider } from '@context/context'
+import { PageTransitionProvider, ThemeContextProvider } from '@context/context'
 import PageTransition from '@components/transition'
 
 export const metadata: Metadata = {
@@ -53,7 +53,7 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <ThemeContextProvider>
-          <PageTransition>
+          <PageTransitionProvider>
             <div style={{
               width: '100vw',
               minHeight: '100vh',
@@ -62,7 +62,7 @@ export default function RootLayout({
               <Header />
               {children}
             </div>
-          </PageTransition>
+          </PageTransitionProvider>
         </ThemeContextProvider>
       </body>
     </html>
