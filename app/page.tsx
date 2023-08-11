@@ -15,7 +15,7 @@ export default function Home() {
         spread: -10,
         randomOpacity: true,
         backgroundColor: ['#0f0f0f', '#1f1f1f'],
-        starColor: ['#ffffff'],
+        starColor: ['#f3a923', '#7f56d9'],
         quantity: 30,
       }} />
     </main>
