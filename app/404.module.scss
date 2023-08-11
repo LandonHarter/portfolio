@@ -9,9 +9,8 @@
 }
 
 .small_title {
-    color: var(--p500);
+    color: var(--p350);
     font-size: 24px;
-    font-family: 'SF Pro Display';
 
     margin-bottom: 25px;
 }
@@ -19,7 +18,6 @@
 .big_title {
     color: var(--text500);
     font-size: 55px;
-    font-family: 'SF Pro Display';
 
     text-align: center;
     width: 60%;
@@ -30,7 +28,6 @@
 .subtitle {
     color: var(--text250);
     font-size: 30px;
-    font-family: 'SF Pro Display';
 
     width: 40%;
     text-align: center;
@@ -49,7 +46,6 @@
     padding: 10px 20px;
     background-color: var(--bg550);
     color: var(--text500);
-    font-family: 'SF Pro Display';
     font-size: 28px;
 
     margin: 0 15px;
@@ -73,7 +69,6 @@
 .go_home {
     padding: 10px 20px;
     background-color: var(--p500);
-    font-family: 'SF Pro Display';
     font-size: 28px;
 
     margin: 0 15px;

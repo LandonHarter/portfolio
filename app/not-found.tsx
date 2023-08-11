@@ -3,9 +3,12 @@
 import Link from 'next/link';
 import styles from './404.module.scss';
 import { useRouter } from 'next/navigation';
+import { useContext } from 'react';
+import PageTransitionContext, { handlePageTransition } from './context/transition';
 
 export default function NotFound() {
     const router = useRouter();
+    const pushPageTransition = useContext(PageTransitionContext);
 
     return (
         <div className={styles.container}>
@@ -16,7 +19,9 @@ export default function NotFound() {
                 <button className={styles.go_back} onClick={() => {
                     router.back();
                 }}>← Go Back</button>
-                <Link href='/'><button className={styles.go_home}>Go Home</button></Link>
+                <Link href='/' onClick={(e) => {
+                    handlePageTransition(e, '/', router, pushPageTransition);
+                }}><button className={styles.go_home}>Go Home</button></Link>
             </div>
         </div>
     )

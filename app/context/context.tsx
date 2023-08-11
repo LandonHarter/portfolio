@@ -2,8 +2,7 @@
 
 import ThemeContext from "./theme";
 import { useState, useEffect } from "react";
-import { AnimatePresence, motion, useAnimate } from "framer-motion";
-import { usePathname } from "next/navigation";
+import { motion, useAnimate } from "framer-motion";
 import PageTransitionContext from "./transition";
 
 export function ThemeContextProvider({ children }: { children: React.ReactNode }) {
@@ -50,22 +49,32 @@ export function PageTransitionProvider({ children }: { children: React.ReactNode
         }
 
         await animate(scope.current, {
+            clipPath: 'polygon(0 100vh, 0 0, 100% 0, 100% 100vh)'
+        }, {
+            duration: 0
+        });
+        await animate(scope.current, {
             opacity: 1,
-            clipPath: 'polygon(0 50%, 50% 0, 100% 50%, 50% 100%)'
+            clipPath: 'polygon(0 50vh, 50vw 0, 100vw 50vh, 50vw 100vh)'
         }, {
             duration: 0.4
         });
         await animate(scope.current, {
             opacity: 0,
-            clipPath: 'polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%)',
+            clipPath: 'polygon(50vw 50vh, 50vw 50vh, 50vw 50vh, 50vw 50vh)',
         }, {
             duration: 0.4
         });
         await animate(scope.current, {
             opacity: 1,
-            clipPath: 'polygon(0 100%, 0 0, 100% 0, 100% 100%)'
+            clipPath: 'polygon(0 100vh, 0 0, 100% 0, 100% 100vh)'
         }, {
             duration: 0.4
+        });
+        await animate(scope.current, {
+            clipPath: 'polygon(0 100%, 0 0, 100% 0, 100% 100%)'
+        }, {
+            duration: 0
         });
     }
 

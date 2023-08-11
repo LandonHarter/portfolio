@@ -13,3 +13,82 @@
     justify-content: space-between;
     align-items: center;
 }
+
+.hero_side {
+    width: 50vw;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    overflow: visible;
+}
+
+.intro {
+    margin-left: 15vw;
+    transform: translateY(-15vh);
+}
+
+.intro h3 {
+    width: 100%;
+    white-space: nowrap;
+    font-size: 40px;
+    font-weight: 800;
+    color: var(--p350);
+}
+
+.intro h1 {
+    width: 100%;
+    white-space: nowrap;
+    font-size: 80px;
+    font-weight: 800;
+    color: var(--text500);
+}
+
+.intro p {
+    width: 100%;
+    font-size: 28px;
+    font-weight: 400;
+    color: var(--text600);
+}
+
+.about_hero {
+    width: 100vw;
+    height: fit-content;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: var(--bg550);
+}
+
+.about_hero_side {
+    width: 50vw;
+    margin: 80px 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    overflow: visible;
+}
+
+.about_title {
+    width: 100%;
+    white-space: nowrap;
+    font-size: 28px;
+    font-weight: 800;
+    color: var(--p350);
+    margin-bottom: 30px;
+}
+
+.about {
+    width: 65%;
+    font-size: 22px;
+    font-weight: 400;
+    color: var(--text600);
+}
+
+.about_hero_side_left {
+    align-items: flex-end;
+}
