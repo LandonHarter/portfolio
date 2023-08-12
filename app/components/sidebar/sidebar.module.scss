@@ -72,3 +72,13 @@
     transform: translateX(calc(-50% - 5px));
     rotate: 90deg;
 }
+
+@media screen and (max-width: 768px) {
+    .social_sidebar {
+        display: none;
+    }
+
+    .contact_sidebar {
+        display: none;
+    }
+}

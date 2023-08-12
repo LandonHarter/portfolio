@@ -123,3 +123,36 @@
     flex-wrap: wrap;
     justify-content: center;
 }
+
+@media screen and (max-width: 1100px) {
+    .about_hero {
+        flex-direction: column;
+        align-items: center;
+
+        padding: 100px 0;
+    }
+
+    .about_hero_side {
+        width: 100vw;
+        margin: 0;
+        padding: 0 20px;
+        align-items: center;
+    }
+
+    .about_hero_side_left {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .about_title {
+        width: 100%;
+        text-align: center;
+    }
+
+    .about {
+        width: 90%;
+        text-align: center;
+    }
+}

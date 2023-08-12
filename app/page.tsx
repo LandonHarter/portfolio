@@ -40,7 +40,7 @@ export default function Home() {
           className: `${styles.about_hero_side} ${styles.about_hero_side_left}`
         }}>
           <div style={{ marginRight: '15vw' }}>
-            <h1>Photo</h1>
+
           </div>
         </FadeRiseAnimation>
         <FadeRiseAnimation delay={0.5} options={{ margin: '50px', once: true }} props={{
