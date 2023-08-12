@@ -45,7 +45,7 @@
     color: var(--text500);
 }
 
-.intro p {
+.intro_subtitle {
     width: 100%;
     font-size: 28px;
     font-weight: 400;
@@ -109,7 +109,7 @@
     color: var(--p350);
 }
 
-.projects_content p {
+.projects_content_subtitle {
     margin-top: 20px;
     margin-bottom: 50px;
     font-size: 28px;
@@ -121,5 +121,5 @@
     max-width: 60vw;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
 }

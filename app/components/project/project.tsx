@@ -15,7 +15,7 @@ export default function Project({ project, index }: { project: Project, index: n
 
     return (
 
-        <FadeRiseAnimation delay={(index / 10) + 0.2} options={{ margin: '50px', once: true }} props={{
+        <FadeRiseAnimation delay={(index / 5) + 0.2} options={{ margin: '50px', once: true }} props={{
             className: styles.project_container
         }}>
             <div className={styles.project}>
@@ -23,24 +23,24 @@ export default function Project({ project, index }: { project: Project, index: n
                     backgroundImage: `url(${project.image})`
                 }} />
                 <div className={styles.card_back}>
-                    <Link href={`/projects/${project.name.toLowerCase()}`} onClick={(e) => {
-                        handlePageTransition(e, `/projects/${project.name.toLowerCase()}`, router, pushPageTransition)
-                    }} style={{ textDecoration: 'none' }}>
-                        <div className={styles.project_details}>
-                            <div className={styles.top}>
+                    <div className={styles.project_details}>
+                        <div className={styles.top}>
+                            <Link href={`/projects/${project.name.toLowerCase()}`} onClick={(e) => {
+                                handlePageTransition(e, `/projects/${project.name.toLowerCase()}`, router, pushPageTransition)
+                            }} style={{ textDecoration: 'none' }}>
                                 <h3>{project.name}</h3>
-                                <div className={styles.project_links}>
-                                    <Link href={project.github} target='_blank' className={styles.project_link}>
-                                        <Image src='/images/icons/github.png' alt='link' width={30} height={30} style={{ marginRight: 5 }} />
-                                    </Link>
-                                    <Link href={project.link} target='_blank' className={styles.project_link}>
-                                        <Image src='/images/icons/link.png' alt='link' width={25} height={25} style={{ marginRight: 5 }} />
-                                    </Link>
-                                </div>
+                            </Link>
+                            <div className={styles.project_links}>
+                                <Link href={project.github} target='_blank' className={styles.project_link}>
+                                    <Image src='/images/icons/github.png' alt='link' width={30} height={30} style={{ marginRight: 5 }} />
+                                </Link>
+                                <Link href={project.link} target='_blank' className={styles.project_link}>
+                                    <Image src='/images/icons/link.png' alt='link' width={25} height={25} style={{ marginRight: 5 }} />
+                                </Link>
                             </div>
-                            <p>{project.description}</p>
                         </div>
-                    </Link>
+                        <p>{project.description}</p>
+                    </div>
 
                     <div className={styles.tags}>
                         {project.tags.map((tagType, index) => {

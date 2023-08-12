@@ -27,7 +27,7 @@ export default function Home() {
           <div className={styles.intro}>
             <h3>Hi, I&apos;m</h3>
             <h1>Landon Harter</h1>
-            <p>I&apos;m a 16 year old full stack web developer based out of Michigan.</p>
+            <p className={styles.intro_subtitle}>I&apos;m a 16 year old full stack web developer based out of Michigan.</p>
           </div>
         </div>
         <div className={styles.hero_side}>
@@ -59,14 +59,12 @@ export default function Home() {
             <h3>Projects</h3>
           </FadeRiseAnimation>
           <FadeRiseAnimation delay={0.2} options={{ margin: '50px', once: true }}>
-            <p>Here is what I&apos;ve been working on...</p>
+            <p className={styles.projects_content_subtitle}>Here is what I&apos;ve been working on...</p>
           </FadeRiseAnimation>
 
           <div className={styles.projects}>
             {Projects.map((project, index) => <Project project={project} index={index} key={index} />)}
           </div>
-
-          <div style={{ marginBottom: 300 }} />
         </div>
       </div>
     </main>

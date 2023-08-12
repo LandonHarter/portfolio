@@ -5,7 +5,7 @@
 
     width: var(--project-width);
     height: var(--project-height);
-    margin: 30px 0;
+    margin: 30px;
     cursor: pointer;
 }
 
@@ -74,10 +74,10 @@
 }
 
 .card_back p {
-    margin: 0 15px !important;
-    font-size: 16px !important;
+    margin: 0 15px;
+    font-size: 16px;
     font-weight: 400;
-    color: var(--text600) !important;
+    color: var(--text600);
 }
 
 .project_links {
