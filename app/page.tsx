@@ -35,7 +35,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className={styles.about_hero}>
+      <div className={styles.about_hero} id='about'>
         <FadeRiseAnimation options={{ margin: '50px', once: true }} props={{
           className: `${styles.about_hero_side} ${styles.about_hero_side_left}`
         }}>
@@ -53,7 +53,7 @@ export default function Home() {
         </FadeRiseAnimation>
       </div>
 
-      <div className={styles.hero}>
+      <div className={styles.hero} id='projects'>
         <div className={styles.projects_content}>
           <FadeRiseAnimation options={{ margin: '50px', once: true }}>
             <h3>Projects</h3>

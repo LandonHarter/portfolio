@@ -15,8 +15,15 @@ export default function Header() {
     const pushPageTransition = useContext(PageTransitionContext);
     const theme = useContext(ThemeContext);
 
+    function scrollTo(id: string) {
+        const element = document.getElementById(id);
+        if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+        }
+    }
+
     return (
-        <header className={styles.header}>
+        <header className={styles.header} id='header'>
             <motion.section
                 className={styles.header_left}
                 initial={{ opacity: 0, y: -50 }}
@@ -37,19 +44,23 @@ export default function Header() {
             >
                 <nav className={styles.nav}>
                     <ul className={styles.nav_ul}>
-                        <li className={`${styles.nav_link} ${route === '' && styles.nav_link_active}`}>
-                            <Link href='/' onClick={(e) => {
-                                handlePageTransition(e, '/', router, pushPageTransition);
-                            }}>
-                                Home
-                            </Link>
+                        <li className={styles.nav_link} onClick={(e) => {
+                            e.preventDefault();
+                            scrollTo('header');
+                        }}>
+                            Home
                         </li>
-                        <li className={`${styles.nav_link} ${route === 'projects' && styles.nav_link_active}`}>
-                            <Link href='/projects' onClick={(e) => {
-                                handlePageTransition(e, '/projects', router, pushPageTransition);
-                            }}>
-                                Projects
-                            </Link>
+                        <li className={styles.nav_link} onClick={(e) => {
+                            e.preventDefault();
+                            scrollTo('about');
+                        }}>
+                            About
+                        </li>
+                        <li className={styles.nav_link} onClick={(e) => {
+                            e.preventDefault();
+                            scrollTo('projects');
+                        }}>
+                            Projects
                         </li>
                     </ul>
                 </nav>
