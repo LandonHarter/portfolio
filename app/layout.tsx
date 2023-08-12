@@ -2,6 +2,7 @@ import Header from '@components/header/header'
 import './globals.css'
 import type { Metadata } from 'next'
 import { PageTransitionProvider, ThemeContextProvider } from '@context/context'
+import Footer from '@components/footer/footer'
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://landonharter.me'),
@@ -60,6 +61,7 @@ export default function RootLayout({
             }}>
               <Header />
               {children}
+              <Footer />
             </div>
           </PageTransitionProvider>
         </ThemeContextProvider>

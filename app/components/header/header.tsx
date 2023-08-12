@@ -11,7 +11,6 @@ import { motion } from 'framer-motion';
 
 export default function Header() {
     const router = useRouter();
-    const route = usePathname().split('/')[1];
     const pushPageTransition = useContext(PageTransitionContext);
     const theme = useContext(ThemeContext);
 

@@ -24,11 +24,16 @@ export default function Home() {
 
       <div className={styles.hero} style={{ height: 'calc(100vh - 100px)' }}>
         <div className={styles.hero_side}>
-          <div className={styles.intro}>
+          <FadeRiseAnimation options={{ once: true }} delay={0.5} animate={{
+            opacity: 1,
+            y: '-10vh'
+          }} props={{
+            className: styles.intro
+          }}>
             <h3>Hi, I&apos;m</h3>
             <h1>Landon Harter</h1>
             <p className={styles.intro_subtitle}>I&apos;m a 16 year old full stack web developer based out of Michigan.</p>
-          </div>
+          </FadeRiseAnimation>
         </div>
         <div className={styles.hero_side}>
 
@@ -36,14 +41,14 @@ export default function Home() {
       </div>
 
       <div className={styles.about_hero} id='about'>
-        <FadeRiseAnimation options={{ margin: '50px', once: true }} props={{
+        <FadeRiseAnimation options={{ once: true }} props={{
           className: `${styles.about_hero_side} ${styles.about_hero_side_left}`
         }}>
           <div style={{ marginRight: '15vw' }}>
 
           </div>
         </FadeRiseAnimation>
-        <FadeRiseAnimation delay={0.5} options={{ margin: '50px', once: true }} props={{
+        <FadeRiseAnimation delay={0.5} options={{ once: true }} props={{
           className: styles.about_hero_side
         }}>
           <h3 className={styles.about_title}>About Me</h3>
@@ -55,10 +60,10 @@ export default function Home() {
 
       <div className={styles.hero} id='projects'>
         <div className={styles.projects_content}>
-          <FadeRiseAnimation options={{ margin: '50px', once: true }}>
+          <FadeRiseAnimation options={{ once: true }}>
             <h3>Projects</h3>
           </FadeRiseAnimation>
-          <FadeRiseAnimation delay={0.2} options={{ margin: '50px', once: true }}>
+          <FadeRiseAnimation delay={0.2} options={{ once: true }}>
             <p className={styles.projects_content_subtitle}>Here is what I&apos;ve been working on...</p>
           </FadeRiseAnimation>
 

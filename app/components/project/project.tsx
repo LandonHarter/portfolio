@@ -15,7 +15,7 @@ export default function Project({ project, index }: { project: Project, index: n
 
     return (
 
-        <FadeRiseAnimation delay={(index / 5) + 0.2} options={{ margin: '50px', once: true }} props={{
+        <FadeRiseAnimation delay={(index / 10) + 0.1} options={{ once: true }} props={{
             className: styles.project_container
         }}>
             <div className={styles.project}>
