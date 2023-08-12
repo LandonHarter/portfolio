@@ -27,8 +27,8 @@
 }
 
 .social {
-    width: 25px;
-    height: 25px;
+    width: 25px !important;
+    height: 25px !important;
     margin: 0 0 30px 0;
 
     stroke: var(--text550);
@@ -47,10 +47,6 @@
 .social:hover {
     stroke: var(--p500);
     transform: translateY(-5px);
-}
-
-.social_stackoverflow {
-    stroke-width: 5px;
 }
 
 .email {

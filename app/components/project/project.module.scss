@@ -1,0 +1,123 @@
+.project_container {
+    --project-aspect-ratio: calc(16 / 9);
+    --project-height: 260px;
+    --project-width: calc(var(--project-height) * var(--project-aspect-ratio));
+
+    width: var(--project-width);
+    height: var(--project-height);
+    margin: 30px 0;
+    cursor: pointer;
+}
+
+.project {
+    width: var(--project-width);
+    height: var(--project-height);
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+
+    background-color: var(--bg550);
+    border-radius: 10px;
+    border: 1px solid var(--bg450);
+    box-shadow: 0px 0px 10px var(--bg550);
+
+    transform-style: preserve-3d;
+    transform-origin: center;
+    perspective: 1000px;
+
+    --hover-transition: rotate 0.5s ease-in-out, box-shadow 0.3s ease-in-out;
+    transition: var(--hover-transition);
+    -o-transition: var(--hover-transition);
+    -ms-transition: var(--hover-transition);
+    -moz-transition: var(--hover-transition);
+    -webkit-transition: var(--hover-transition);
+}
+
+.project_container:hover .project {
+    rotate: 1 0 0 180deg;
+    box-shadow: 0px 0px 15px var(--bg550);
+}
+
+.card_front,
+.card_back {
+    min-width: var(--project-width);
+    min-height: var(--project-height);
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.card_front {
+    border-radius: 10px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.card_back {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    rotate: 1 0 0 180deg;
+}
+
+.project_details {
+    display: flex;
+    flex-direction: column;
+}
+
+.card_back h3 {
+    margin: 15px !important;
+    font-weight: 800;
+    color: var(--text500) !important;
+}
+
+.card_back p {
+    margin: 0 15px !important;
+    font-size: 16px !important;
+    font-weight: 400;
+    color: var(--text600) !important;
+}
+
+.project_links {
+    margin: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.project_link {
+    display: flex;
+    align-items: center;
+
+    margin-right: 20px;
+}
+
+.top {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tags {
+    width: 100%;
+    margin: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.tag {
+    margin-right: 5px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: var(--p350);
+    color: var(--p750);
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.tag p {
+    margin: 0 !important;
+}
