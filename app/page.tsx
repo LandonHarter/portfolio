@@ -4,6 +4,8 @@ import StarbackBackground from './components/starback/starback'
 import Projects from './data/projects'
 import Project from '@components/project/project'
 import styles from './page.module.scss'
+import Image from 'next/image'
+import FollowCursor from '@components/follow'
 
 export default function Home() {
   return (
@@ -45,7 +47,9 @@ export default function Home() {
           className: `${styles.about_hero_side} ${styles.about_hero_side_left}`
         }}>
           <div style={{ marginRight: '15vw' }}>
-
+            <FollowCursor>
+              <Image src='/images/portraits/chill.jpg' alt='picture of landon' width={1656} height={2088} className={styles.about_portrait} />
+            </FollowCursor>
           </div>
         </FadeRiseAnimation>
         <FadeRiseAnimation delay={0.5} options={{ once: true }} props={{

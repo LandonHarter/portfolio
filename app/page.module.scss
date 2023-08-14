@@ -82,6 +82,15 @@
     margin-bottom: 30px;
 }
 
+.about_portrait {
+    --portrait-height: 400px;
+    --portrait-width: calc(var(--portrait-height) * (1656/2088));
+    width: var(--portrait-width);
+    height: var(--portrait-height);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
 .about {
     width: 65%;
     font-size: 22px;
