@@ -48,7 +48,7 @@ export default function Home() {
         }}>
           <div style={{ marginRight: '15vw' }}>
             <FollowCursor>
-              <Image src='/images/portraits/chill.jpg' alt='picture of landon' width={1656} height={2088} className={styles.about_portrait} />
+              <Image src='/images/portraits/chill.JPG' alt='picture of landon' width={1656} height={2088} className={styles.about_portrait} />
             </FollowCursor>
           </div>
         </FadeRiseAnimation>
