@@ -25,11 +25,7 @@ export default function Project({ project, index }: { project: Project, index: n
                 <div className={styles.card_back}>
                     <div className={styles.project_details}>
                         <div className={styles.top}>
-                            <Link href={`/projects/${project.name.toLowerCase()}`} onClick={(e) => {
-                                handlePageTransition(e, `/projects/${project.name.toLowerCase()}`, router, pushPageTransition)
-                            }} style={{ textDecoration: 'none' }}>
-                                <h3>{project.name}</h3>
-                            </Link>
+                            <h3>{project.name}</h3>
                             <div className={styles.project_links}>
                                 <Link href={project.github} target='_blank' className={styles.project_link}>
                                     <Image src='/images/icons/github.png' alt='link' width={30} height={30} style={{ marginRight: 5 }} />
