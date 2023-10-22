@@ -61,6 +61,12 @@ export default function Header() {
                         }}>
                             Projects
                         </li>
+                        <li className={styles.nav_link} onClick={(e) => {
+                            e.preventDefault();
+                            scrollTo('hackathons');
+                        }}>
+                            Hackathons
+                        </li>
                     </ul>
                 </nav>
             </motion.section>

@@ -6,6 +6,8 @@ import Project from '@components/project/project'
 import styles from './page.module.scss'
 import Image from 'next/image'
 import FollowCursor from '@components/follow'
+import Hackathons, { CompetedIn, Won } from './data/hackathons';
+import Hackathon from './components/hackathon/hackathon'
 
 export default function Home() {
   return (
@@ -73,6 +75,21 @@ export default function Home() {
 
           <div className={styles.projects}>
             {Projects.map((project, index) => <Project project={project} index={index} key={index} />)}
+          </div>
+        </div>
+      </div>
+
+      <div className={styles.hero} id='hackathons'>
+        <div className={styles.projects_content}>
+          <FadeRiseAnimation options={{ once: true }}>
+            <h3>Hackathons</h3>
+          </FadeRiseAnimation>
+          <FadeRiseAnimation delay={0.2} options={{ once: true }}>
+            <p className={styles.projects_content_subtitle}>Here are some hackathons I have won 💪</p>
+          </FadeRiseAnimation>
+
+          <div className={styles.hackathons}>
+            {Hackathons.map((hackathon, index) => <Hackathon hackathon={hackathon} index={index} key={index} />)}
           </div>
         </div>
       </div>

@@ -135,6 +135,14 @@
     justify-content: center;
 }
 
+.hackathons {
+    width: 80vw;
+    height: fit-content;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
 @media screen and (max-width: 1100px) {
     .about_hero {
         flex-direction: column;

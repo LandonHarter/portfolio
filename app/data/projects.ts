@@ -63,10 +63,47 @@ export const Tags: { [tag: string]: Tag } = {
         name: "Tailwind CSS",
         color: "#38B2AC",
         textColor: "#FFFFFF"
-    }
+    },
+    "Hackathon": {
+        name: "Hackathon",
+        color: "#FFF",
+        textColor: "#000"
+    },
 };
 
 const Projects: Project[] = [
+    {
+        name: 'EcoTrackr',
+        description: 'Track your carbon footprint and make a difference. Built in 48 hours for a hackathon.',
+        image: '/images/projects/ecotrackr.jpg',
+        link: 'https://ecotrackr.vercel.app',
+        github: 'https://github.com/LandonHarter/ecotrackr',
+        tags: ['Next.js', 'TypeScript', 'Firebase', 'Hackathon']
+    },
+    {
+        name: 'Graider',
+        description: 'Get a second opinion on your essay, from an AI. Built in 48 hours for a hackathon.',
+        image: '/images/projects/graider.png',
+        link: 'https://graider.vercel.app',
+        github: 'https://github.com/LandonHarter/graider',
+        tags: ['Next.js', 'TypeScript', 'Firebase', 'Hackathon']
+    },
+    {
+        name: 'TutorTime',
+        description: 'Volunteer as a tutor or get tutored for free in any subject. Built in 48 hours for a hackathon.',
+        image: '/images/projects/tutortime.png',
+        link: 'https://tutortime.vercel.app',
+        github: 'https://github.com/LandonHarter/tutortime',
+        tags: ['Next.js', 'TypeScript', 'Firebase', 'Hackathon']
+    },
+    {
+        name: 'Oppur',
+        description: 'Search for student opportunities in a tinder like UI. Built in 48 hours for a hackathon.',
+        image: '/images/projects/oppur.jpg',
+        link: 'https://oppur.vercel.app',
+        github: 'https://github.com/LandonHarter/oppur',
+        tags: ['Next.js', 'TypeScript', 'Firebase', 'Hackathon']
+    },
     {
         name: "BlitzEDU",
         description: "Boost your study productivity in and out of the classroom with proven study methods and new AI tools.",
@@ -83,13 +120,5 @@ const Projects: Project[] = [
         github: "https://github.com/radiumgame/radium",
         tags: ["Java", "Gradle", "OpenGL"]
     },
-    {
-        name: "Spicy Takes",
-        description: "A social media platform for sharing your hot takes.",
-        image: "/images/projects/hottakes.png",
-        link: "https://spiicytakes.vercel.app",
-        github: "https://github.com/LandonHarter/hottakes",
-        tags: ["Next.js", "TypeScript", "Firebase", "Tailwind CSS"]
-    }
 ];
 export default Projects;
