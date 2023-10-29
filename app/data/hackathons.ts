@@ -37,6 +37,11 @@ const Hackathons: Hackathon[] = [
         name: 'EquiHacks S1',
         image: 'https://d112y698adiu2z.cloudfront.net/photos/production/challenge_thumbnails/002/532/232/datas/medium.png',
         link: 'https://equihacks.devpost.com'
+    },
+    {
+        name: 'CYSA Hacks 2.0',
+        image: 'https://d112y698adiu2z.cloudfront.net/photos/production/challenge_thumbnails/002/619/843/datas/medium.png',
+        link: 'https://csya-hacks-2-0.devpost.com'
     }
 ];
 export default Hackathons;
