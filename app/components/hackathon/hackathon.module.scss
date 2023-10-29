@@ -5,4 +5,9 @@
     flex-direction: column;
     align-items: center;
     margin: 20px 50px;
+    transition: scale 0.2s ease-in-out;
+}
+
+.hackathon_container:hover {
+    scale: 1.1;
 }
