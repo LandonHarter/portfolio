@@ -5,10 +5,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
         {
             url: "https://landonharter.me",
             lastModified: new Date()
-        },
-        {
-            url: "https://landonharter.me/projects",
-            lastModified: new Date()
         }
     ];
 }

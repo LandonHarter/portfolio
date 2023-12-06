@@ -26,8 +26,8 @@ export default function Home() {
         quantity: 30,
       }} />
 
-      <div className={styles.hero} style={{ height: 'calc(100vh - 100px)' }}>
-        <div className={styles.hero_side}>
+      <div className={`${styles.hero} ${styles.landing_hero}`} style={{ height: 'calc(100vh - 100px)' }}>
+        <div className={`${styles.hero_side} ${styles.landing}`}>
           <FadeRiseAnimation options={{ once: true }} delay={0.5} animate={{
             opacity: 1,
             y: '-10vh'
@@ -48,7 +48,7 @@ export default function Home() {
         <FadeRiseAnimation options={{ once: true }} props={{
           className: `${styles.about_hero_side} ${styles.about_hero_side_left}`
         }}>
-          <div style={{ marginRight: '15vw' }}>
+          <div className={styles.portrait}>
             <FollowCursor>
               <Image src='/images/portraits/chill.JPG' alt='picture of landon' width={1656} height={2088} className={styles.about_portrait} />
             </FollowCursor>
