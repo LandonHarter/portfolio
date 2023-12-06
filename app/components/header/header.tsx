@@ -2,7 +2,7 @@
 
 import styles from './header.module.scss'
 import Image from 'next/image';
-import { useContext } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import ThemeContext from '@context/theme';
 import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
@@ -14,12 +14,20 @@ export default function Header() {
     const pushPageTransition = useContext(PageTransitionContext);
     const theme = useContext(ThemeContext);
 
+    const [windowSize, setWindowSize] = useState<{ x: number, y: number }>({ x: 0, y: 0 });
+
     function scrollTo(id: string) {
         const element = document.getElementById(id);
         if (element) {
             element.scrollIntoView({ behavior: 'smooth' });
         }
     }
+
+    useEffect(() => {
+        window.addEventListener('resize', () => {
+            setWindowSize({ x: window.innerWidth, y: window.innerHeight });
+        });
+    }, []);
 
     return (
         <header className={styles.header} id='header'>
@@ -35,41 +43,43 @@ export default function Header() {
                     <Image src={`/images/logos/logo-${theme === 'dark' ? 'light' : 'dark'}.png`} alt="Landon Harter Logo" width={55} height={55} className={styles.logo} />
                 </Link>
             </motion.section>
-            <motion.section
-                className={styles.header_right}
-                initial={{ opacity: 0, y: -50 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 1.5 }}
-            >
-                <nav className={styles.nav}>
-                    <ul className={styles.nav_ul}>
-                        <li className={styles.nav_link} onClick={(e) => {
-                            e.preventDefault();
-                            scrollTo('header');
-                        }}>
-                            Home
-                        </li>
-                        <li className={styles.nav_link} onClick={(e) => {
-                            e.preventDefault();
-                            scrollTo('about');
-                        }}>
-                            About
-                        </li>
-                        <li className={styles.nav_link} onClick={(e) => {
-                            e.preventDefault();
-                            scrollTo('projects');
-                        }}>
-                            Projects
-                        </li>
-                        <li className={styles.nav_link} onClick={(e) => {
-                            e.preventDefault();
-                            scrollTo('hackathons');
-                        }}>
-                            Hackathons
-                        </li>
-                    </ul>
-                </nav>
-            </motion.section>
+            {windowSize.x > 768 &&
+                <motion.section
+                    className={styles.header_right}
+                    initial={{ opacity: 0, y: -50 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: 1.5 }}
+                >
+                    <nav className={styles.nav}>
+                        <ul className={styles.nav_ul}>
+                            <li className={styles.nav_link} onClick={(e) => {
+                                e.preventDefault();
+                                scrollTo('header');
+                            }}>
+                                Home
+                            </li>
+                            <li className={styles.nav_link} onClick={(e) => {
+                                e.preventDefault();
+                                scrollTo('about');
+                            }}>
+                                About
+                            </li>
+                            <li className={styles.nav_link} onClick={(e) => {
+                                e.preventDefault();
+                                scrollTo('projects');
+                            }}>
+                                Projects
+                            </li>
+                            <li className={styles.nav_link} onClick={(e) => {
+                                e.preventDefault();
+                                scrollTo('hackathons');
+                            }}>
+                                Hackathons
+                            </li>
+                        </ul>
+                    </nav>
+                </motion.section>
+            }
         </header>
     );
 }
