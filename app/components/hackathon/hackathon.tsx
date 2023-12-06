@@ -16,7 +16,8 @@ export default function Hackathon(props: { hackathon: Hackathon, index: number }
                 }} />
                 <h1 style={{
                     fontSize: '1.2rem',
-                    fontWeight: 500
+                    fontWeight: 500,
+                    textAlign: 'center',
                 }}>{props.hackathon.name}</h1>
             </FadeRiseAnimation>
         </Link>

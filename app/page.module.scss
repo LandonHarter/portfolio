@@ -126,6 +126,7 @@
     font-size: 28px;
     font-weight: 400;
     color: var(--text600);
+    text-align: center;
 }
 
 .projects {
@@ -169,30 +170,25 @@
         justify-content: center;
     }
 
-    .about_title {
-        width: 100%;
-        text-align: center;
-    }
-
     .about {
         width: 90%;
         text-align: center;
     }
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 1250px) {
 
     .landing_hero {
         width: 100vw;
         height: 100vh;
         display: flex;
-        flex-direction: column !important;
-        align-items: center !important;
-        justify-content: center !important;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
 
     .landing {
-        width: 100vw !important;
+        width: 100vw;
         margin: 0;
         display: flex;
         flex-direction: column;
@@ -200,7 +196,7 @@
     }
 
     .intro {
-        width: calc(100vw - 40px);
+        width: calc(100vw - 80px);
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -219,6 +215,8 @@
     }
 
     .intro p {
+        width: 80%;
+        max-width: 700px;
         font-size: 30px;
         text-align: center;
     }
@@ -245,6 +243,49 @@
     .portrait {
         margin: 0;
         margin-bottom: 50px;
+    }
+
+    .about_title {
+        width: 100%;
+        text-align: center;
+    }
+
+}
+
+@media screen and (max-width: 700px) {
+
+    .intro p {
+        width: 80vw;
+        max-width: none;
+    }
+
+    .projects_content_subtitle {
+        width: 80vw;
+    }
+
+    .hackathons {
+        width: fit-content;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 35px;
+    }
+
+}
+
+@media screen and (max-width: 500px) {
+
+    .intro {
+        width: 100vw;
+    }
+
+    .intro h1 {
+        width: 90vw;
+        font-size: 45px;
+    }
+
+    .intro p {
+        width: 90vw;
+        font-size: 18px;
     }
 
 }

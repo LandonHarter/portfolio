@@ -11,3 +11,11 @@
 .hackathon_container:hover {
     scale: 1.1;
 }
+
+@media screen and (max-width: 700px) {
+
+    .hackathon_container {
+        margin: 0;
+    }
+
+}

@@ -121,3 +121,13 @@
 .tag p {
     margin: 0 !important;
 }
+
+@media screen and (max-width: 600px) {
+
+    .project_container {
+        --project-aspect-ratio: calc(16 / 9);
+        --project-height: 200px;
+        --project-width: calc(var(--project-height) * var(--project-aspect-ratio));
+    }
+
+}
