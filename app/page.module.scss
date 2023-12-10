@@ -90,6 +90,10 @@
     width: var(--portrait-width);
     height: var(--portrait-height);
     border-radius: 10px;
+    background-image: url('/images/portraits/soccer.png');
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: -70px;
     cursor: pointer;
 }
 
