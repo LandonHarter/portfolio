@@ -50,7 +50,7 @@ export default function Home() {
         }}>
           <div className={styles.portrait}>
             <FollowCursor>
-              <Image src='/images/portraits/chill.JPG' alt='picture of landon' width={1656} height={2088} className={styles.about_portrait} />
+              <Image src='/images/portraits/soccer.png' alt='picture of landon' width={1656} height={2088} className={styles.about_portrait} />
             </FollowCursor>
           </div>
         </FadeRiseAnimation>
