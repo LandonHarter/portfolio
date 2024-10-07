@@ -1,295 +1,288 @@
 .background {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100vw;
-    height: 100vh;
-    z-index: 0;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100vw;
+	height: 100vh;
+	z-index: 0;
 }
 
 .hero {
-    width: 100vw;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+	width: 100vw;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 }
 
 .hero_side {
-    width: 50vw;
+	width: 50vw;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    pointer-events: none;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	pointer-events: none;
 
-    overflow: visible;
+	overflow: visible;
 }
 
 .intro {
-    margin-left: 15vw;
-    transform: translateY(-10vh);
+	margin-left: 15vw;
+	transform: translateY(-10vh);
 }
 
 .intro h3 {
-    width: 100%;
-    white-space: nowrap;
-    font-size: 40px;
-    font-weight: 800;
-    color: var(--p350);
+	width: 100%;
+	white-space: nowrap;
+	font-size: 40px;
+	font-weight: 800;
+	color: var(--p350);
 }
 
 .intro h1 {
-    width: 100%;
-    white-space: nowrap;
-    font-size: 80px;
-    font-weight: 800;
-    color: var(--text500);
+	width: 100%;
+	white-space: nowrap;
+	font-size: 80px;
+	font-weight: 800;
+	color: var(--text500);
 }
 
 .intro_subtitle {
-    width: 100%;
-    font-size: 28px;
-    font-weight: 400;
-    color: var(--text600);
+	width: 100%;
+	font-size: 28px;
+	font-weight: 400;
+	color: var(--text600);
 }
 
 .about_hero {
-    width: 100vw;
-    height: fit-content;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+	width: 100vw;
+	height: fit-content;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 
-    background-color: var(--bg550);
+	background-color: var(--bg550);
 }
 
 .about_hero_side {
-    width: 50vw;
-    margin: 160px 0;
+	width: 50vw;
+	margin: 160px 0;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    pointer-events: none;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	pointer-events: none;
 
-    overflow: visible;
+	overflow: visible;
 }
 
 .about_title {
-    width: 100%;
-    white-space: nowrap;
-    font-size: 28px;
-    font-weight: 800;
-    color: var(--p350);
-    margin-bottom: 30px;
+	width: 100%;
+	white-space: nowrap;
+	font-size: 28px;
+	font-weight: 800;
+	color: var(--p350);
+	margin-bottom: 30px;
 }
 
 .about_portrait {
-    --portrait-height: 400px;
-    --portrait-width: calc(var(--portrait-height) * (1656/2088));
-    width: var(--portrait-width);
-    height: var(--portrait-height);
-    border-radius: 10px;
-    background-image: url('/images/portraits/soccer.png');
-    background-size: cover;
-    background-position-x: center;
-    background-position-y: -70px;
-    cursor: pointer;
+	--portrait-height: 400px;
+	--portrait-width: calc(var(--portrait-height) * (1656 / 2088));
+	width: var(--portrait-width);
+	height: var(--portrait-height);
+	border-radius: 10px;
+	background-image: url("/images/portraits/soccer2.jpeg");
+	background-size: cover;
+	background-position-x: center;
+	cursor: pointer;
 }
 
 .about {
-    width: 65%;
-    font-size: 22px;
-    font-weight: 400;
-    color: var(--text600);
+	width: 65%;
+	font-size: 22px;
+	font-weight: 400;
+	color: var(--text600);
 }
 
 .about_hero_side_left {
-    align-items: flex-end;
+	align-items: flex-end;
 }
 
 .projects_content {
-    width: 100vw;
-    height: 100%;
+	width: 100vw;
+	height: 100%;
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 .projects_content h3 {
-    margin-top: 100px;
-    font-size: 40px;
-    font-weight: 800;
-    color: var(--p350);
+	margin-top: 100px;
+	font-size: 40px;
+	font-weight: 800;
+	color: var(--p350);
 }
 
 .projects_content_subtitle {
-    margin-top: 20px;
-    margin-bottom: 50px;
-    font-size: 28px;
-    font-weight: 400;
-    color: var(--text600);
-    text-align: center;
+	margin-top: 20px;
+	margin-bottom: 50px;
+	font-size: 28px;
+	font-weight: 400;
+	color: var(--text600);
+	text-align: center;
 }
 
 .projects {
-    max-width: 60vw;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+	max-width: 60vw;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
 }
 
 .hackathons {
-    width: 80vw;
-    height: fit-content;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+	width: 80vw;
+	height: fit-content;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
 }
 
 .portrait {
-    margin-right: 15vw;
+	margin-right: 15vw;
 }
 
 @media screen and (max-width: 1100px) {
-    .about_hero {
-        flex-direction: column;
-        align-items: center;
+	.about_hero {
+		flex-direction: column;
+		align-items: center;
 
-        padding: 100px 0;
-    }
+		padding: 100px 0;
+	}
 
-    .about_hero_side {
-        width: 100vw;
-        margin: 0;
-        padding: 0 20px;
-        align-items: center;
-    }
+	.about_hero_side {
+		width: 100vw;
+		margin: 0;
+		padding: 0 20px;
+		align-items: center;
+	}
 
-    .about_hero_side_left {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
+	.about_hero_side_left {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
 
-    .about {
-        width: 90%;
-        text-align: center;
-    }
+	.about {
+		width: 90%;
+		text-align: center;
+	}
 }
 
 @media screen and (max-width: 1250px) {
+	.landing_hero {
+		width: 100vw;
+		height: 100vh;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
 
-    .landing_hero {
-        width: 100vw;
-        height: 100vh;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
+	.landing {
+		width: 100vw;
+		margin: 0;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
 
-    .landing {
-        width: 100vw;
-        margin: 0;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
+	.intro {
+		width: calc(100vw - 80px);
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		margin: 0;
+	}
 
-    .intro {
-        width: calc(100vw - 80px);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        margin: 0;
-    }
+	.intro h3 {
+		font-size: 40px;
+		text-align: center;
+	}
 
-    .intro h3 {
-        font-size: 40px;
-        text-align: center;
-    }
+	.intro h1 {
+		font-size: 70px;
+		text-align: center;
+	}
 
-    .intro h1 {
-        font-size: 70px;
-        text-align: center;
-    }
+	.intro p {
+		width: 80%;
+		max-width: 700px;
+		font-size: 30px;
+		text-align: center;
+	}
 
-    .intro p {
-        width: 80%;
-        max-width: 700px;
-        font-size: 30px;
-        text-align: center;
-    }
+	.about_hero {
+		width: 100vw;
+		height: fit-content;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding: 100px 0;
+	}
 
-    .about_hero {
-        width: 100vw;
-        height: fit-content;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 100px 0;
-    }
+	.about_hero_side {
+		width: 100vw;
+		margin: 0;
+		padding: 0 20px;
 
-    .about_hero_side {
-        width: 100vw;
-        margin: 0;
-        padding: 0 20px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
 
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+	.portrait {
+		margin: 0;
+		margin-bottom: 50px;
+	}
 
-    .portrait {
-        margin: 0;
-        margin-bottom: 50px;
-    }
-
-    .about_title {
-        width: 100%;
-        text-align: center;
-    }
-
+	.about_title {
+		width: 100%;
+		text-align: center;
+	}
 }
 
 @media screen and (max-width: 700px) {
+	.intro p {
+		width: 80vw;
+		max-width: none;
+	}
 
-    .intro p {
-        width: 80vw;
-        max-width: none;
-    }
+	.projects_content_subtitle {
+		width: 80vw;
+	}
 
-    .projects_content_subtitle {
-        width: 80vw;
-    }
-
-    .hackathons {
-        width: fit-content;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-gap: 35px;
-    }
-
+	.hackathons {
+		width: fit-content;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-gap: 35px;
+	}
 }
 
 @media screen and (max-width: 500px) {
+	.intro {
+		width: 100vw;
+	}
 
-    .intro {
-        width: 100vw;
-    }
+	.intro h1 {
+		width: 90vw;
+		font-size: 45px;
+	}
 
-    .intro h1 {
-        width: 90vw;
-        font-size: 45px;
-    }
-
-    .intro p {
-        width: 90vw;
-        font-size: 18px;
-    }
-
+	.intro p {
+		width: 90vw;
+		font-size: 18px;
+	}
 }
