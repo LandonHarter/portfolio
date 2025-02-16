@@ -5,15 +5,15 @@ export default function Home() {
 		<main className="flex w-full flex-col gap-12">
 			<div className="flex flex-col gap-4">
 				<h3 className="text-2xl font-medium">hey guys 👋</h3>
-				<p className="text-base opacity-80">
-					i got a really diverse music taste and cool projects and
-					stuff.
+				<p className="w-5/6 text-base opacity-80">
+					i got a really diverse music taste and make cool projects
+					and stuff.
 				</p>
 			</div>
 
 			<div className="flex flex-col gap-4">
 				<h3 className="text-2xl font-medium">about me</h3>
-				<p className="text-base opacity-80">
+				<p className="w-5/6 text-base opacity-80">
 					i am landon, a software engineer from richland, mi. i am
 					currently building{" "}
 					<Link
