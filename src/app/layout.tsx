@@ -1,15 +1,11 @@
+import Footer from "@/components/footer";
+import Header from "@/components/header";
 import Providers from "@/components/providers";
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist_Mono } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-	variable: "--font-geist-sans",
-	subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-	variable: "--font-geist-mono",
+const font = Geist_Mono({
 	subsets: ["latin"],
 });
 
@@ -25,9 +21,15 @@ export default function RootLayout({
 	return (
 		<html lang="en">
 			<body
-				className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+				className={`flex w-screen justify-center bg-background antialiased ${font.className} overflow-x-hidden`}
 			>
-				<Providers>{children}</Providers>
+				<Providers>
+					<div className="flex w-full max-w-[750px] flex-col gap-16 px-8 py-20">
+						<Header />
+						{children}
+						<Footer />
+					</div>
+				</Providers>
 			</body>
 		</html>
 	);
