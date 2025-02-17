@@ -1,4 +1,4 @@
-import { fetchGitHubStats } from "@/lib/github";
+import { GithubContributionData } from "@/lib/github";
 import Link from "next/link";
 
 function timeAgo(date: Date) {
@@ -24,15 +24,17 @@ function timeAgo(date: Date) {
 	return Math.floor(seconds) + " seconds ago";
 }
 
-export default async function GithubHistory() {
-	const stats = await fetchGitHubStats();
+export default async function GithubHistory({
+	stats,
+}: {
+	stats: GithubContributionData | null;
+}) {
 	if (!stats) return null;
-
 	return (
 		<Link
 			href={stats.commits[0].repository.url}
 			target="_blank"
-			className="border-foreground/10 flex flex-col gap-3 border p-4 transition-opacity duration-200 hover:opacity-80"
+			className="border-foreground/10 flex flex-col gap-3 border bg-[#ffffff0d] p-4 transition-opacity duration-200 hover:opacity-80"
 		>
 			<div className="flex items-center gap-2">
 				<svg

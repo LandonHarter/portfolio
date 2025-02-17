@@ -49,7 +49,7 @@ interface GitHubRepositoryNode {
 	owner: GitHubRepositoryOwner;
 }
 
-interface GithubContributionData {
+export interface GithubContributionData {
 	totalContributions: number;
 	contributionDays: GithubContributionDay[];
 	commits: GitHubCommit[];
