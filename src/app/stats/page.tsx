@@ -1,3 +1,4 @@
+import DiscordStatus from "@/components/discord";
 import GithubHistory from "@/components/github";
 import { fetchGitHubStats } from "@/lib/github";
 
@@ -20,6 +21,10 @@ export default async function Stats() {
 			<div className="flex flex-col gap-4">
 				<p className="text-sm opacity-80">latest github commit</p>
 				<GithubHistory stats={githubStats} />
+			</div>
+			<div className="flex flex-col gap-4">
+				<p className="text-sm opacity-80">what i'm doing</p>
+				<DiscordStatus />
 			</div>
 		</main>
 	);
