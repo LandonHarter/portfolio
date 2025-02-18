@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import { useLanyard } from "react-use-lanyard";
 
 const STATUS_IMAGES = {
@@ -13,38 +13,34 @@ export default function DiscordStatus() {
 		userId: "796436513470677022",
 		socket: true,
 	});
-	const [timeElapsed, setTimeElapsed] = useState(0);
-	const intervalRef = useRef<NodeJS.Timeout>(null);
+	const [timeElapsed, setTimeElapsed] = useState("");
 
-	function formatTime() {
-		const initial = new Date(
+	function getTimeElapsed() {
+		const time = new Date(
 			Date.now() - status?.activities[0].timestamps?.start!
 		);
+		const hours = time.getUTCHours();
+		const minutes = time.getUTCMinutes();
+		const seconds = time.getUTCSeconds();
 
-		let hours = initial.getUTCHours();
-		let minutes = initial.getUTCMinutes();
-		let seconds = initial.getUTCSeconds() + timeElapsed;
+		return { hours, minutes, seconds };
+	}
 
-		if (seconds >= 60) {
-			minutes += 1;
-			seconds -= 60;
-		}
-		if (minutes >= 60) {
-			hours += 1;
-			minutes -= 60;
-		}
-
-		return `${hours ? `${hours}h ` : ""}${minutes ? `${minutes}m ` : ""}${seconds}s`;
+	function setFormattedTime() {
+		const { hours, minutes, seconds } = getTimeElapsed();
+		setTimeElapsed(
+			`${hours ? `${hours}h ` : ""}${
+				minutes ? `${minutes}m ` : ""
+			}${seconds ? `${seconds}s` : ""}`
+		);
 	}
 
 	useEffect(() => {
 		if (!status?.activities[0]) return;
-		setTimeElapsed(0);
 
-		intervalRef.current = setInterval(() => {
-			setTimeElapsed((prev) => prev + 1);
-		}, 1000);
-		return () => clearInterval(intervalRef.current!);
+		setFormattedTime();
+		const interval = setInterval(setFormattedTime, 1000);
+		return () => clearInterval(interval);
 	}, [status?.activities[0]]);
 
 	return (
@@ -83,7 +79,7 @@ export default function DiscordStatus() {
 									{status?.activities[0].details}
 								</span>
 								<span className="text-xs opacity-80">
-									{formatTime()}
+									{timeElapsed}
 								</span>
 							</div>
 						</>
