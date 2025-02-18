@@ -76,7 +76,8 @@ export default function DiscordStatus() {
 									{status?.activities[0].name}
 								</span>
 								<span className="text-xs opacity-80">
-									{status?.activities[0].details}
+									{status?.activities[0].details ||
+										"No details"}
 								</span>
 								<span className="text-xs opacity-80">
 									{timeElapsed}
