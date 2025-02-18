@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { useEffect, useRef, useState } from "react";
 import { useLanyard } from "react-use-lanyard";
 
 const STATUS_IMAGES = {
@@ -12,6 +13,39 @@ export default function DiscordStatus() {
 		userId: "796436513470677022",
 		socket: true,
 	});
+	const [timeElapsed, setTimeElapsed] = useState(0);
+	const intervalRef = useRef<NodeJS.Timeout>(null);
+
+	function formatTime() {
+		const initial = new Date(
+			Date.now() - status?.activities[0].timestamps?.start!
+		);
+
+		let hours = initial.getUTCHours();
+		let minutes = initial.getUTCMinutes();
+		let seconds = initial.getUTCSeconds() + timeElapsed;
+
+		if (seconds >= 60) {
+			minutes += 1;
+			seconds -= 60;
+		}
+		if (minutes >= 60) {
+			hours += 1;
+			minutes -= 60;
+		}
+
+		return `${hours ? `${hours}h ` : ""}${minutes ? `${minutes}m ` : ""}${seconds}s`;
+	}
+
+	useEffect(() => {
+		if (!status?.activities[0]) return;
+		setTimeElapsed(0);
+
+		intervalRef.current = setInterval(() => {
+			setTimeElapsed((prev) => prev + 1);
+		}, 1000);
+		return () => clearInterval(intervalRef.current!);
+	}, [status?.activities[0]]);
 
 	return (
 		<div className="border-foreground/10 flex items-center gap-4 border bg-[#ffffff0d] p-4">
@@ -49,7 +83,7 @@ export default function DiscordStatus() {
 									{status?.activities[0].details}
 								</span>
 								<span className="text-xs opacity-80">
-									{status?.activities[0].state}
+									{formatTime()}
 								</span>
 							</div>
 						</>
