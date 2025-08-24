@@ -14,7 +14,7 @@ export default function Home() {
 			<div className="flex flex-col gap-4">
 				<h3 className="text-2xl font-medium">about me</h3>
 				<p className="w-5/6 text-base opacity-80">
-					i am landon, a software engineer from richland, mi. i am
+					i am landon, a software engineer and businessman from richland, mi
 					currently building{" "}
 					<Link
 						href="https://kodisc.com"
@@ -22,8 +22,14 @@ export default function Home() {
 						className="underline"
 					>
 						kodisc.com
-					</Link>{" "}
-					and i also like to think i'm pretty good at coding.
+					</Link>{" "} and{" "}
+					<Link
+						href="https://draftl.com"
+						target="_blank"
+						className="underline"
+					>
+						draftl.com
+					</Link>
 				</p>
 			</div>
 		</main>
