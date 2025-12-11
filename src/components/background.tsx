@@ -19,7 +19,7 @@ interface GeneratorConfig {
 	minSize: number;
 	maxSize: number;
 	shapeTypes: Shape["type"][];
-	animationRange: [number, number]; // [min, max] duration in seconds
+	animationRange: [number, number];
 }
 
 export default function AnimatedLandingBackground() {
@@ -94,7 +94,7 @@ export default function AnimatedLandingBackground() {
 			transition: {
 				duration: shape.animationDuration,
 				delay: shape.animationDelay,
-				ease: "easeInOut",
+				ease: [0.42, 0, 0.58, 1] as const,
 			},
 		};
 
@@ -164,7 +164,7 @@ export default function AnimatedLandingBackground() {
 	};
 
 	return (
-		<div className="pointer-events-none absolute left-0 top-0 -z-10">
+		<div className="pointer-events-none absolute top-0 left-0 -z-10">
 			<svg
 				width="1920"
 				height="756"
