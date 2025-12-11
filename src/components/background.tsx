@@ -164,7 +164,7 @@ export default function AnimatedLandingBackground() {
 	};
 
 	return (
-		<div className="pointer-events-none absolute top-0 left-0 -z-10">
+		<div className="pointer-events-none absolute top-0 left-0 -z-10 hidden lg:block">
 			<svg
 				width="1920"
 				height="756"

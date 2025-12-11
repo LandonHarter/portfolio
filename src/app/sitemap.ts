@@ -24,7 +24,7 @@ function route(
 
 export const routes: MetadataRoute.Sitemap = [
 	route("/", 1.0),
-	route("/projects", 0.8),
+	route("/work", 0.8),
 	route("/stats", 0.8),
 ];
 

@@ -19,7 +19,7 @@ export default function Project({
 			target="_blank"
 			className="flex w-full flex-col gap-1 transition-opacity duration-200 hover:opacity-70"
 		>
-			<div className="grid grid-cols-[50px_auto] gap-4">
+			<div className="grid grid-cols-[150px_auto] gap-4">
 				<h3 className="text-base font-medium">{name}</h3>
 				<p className="text-end text-base opacity-80">{description}</p>
 			</div>

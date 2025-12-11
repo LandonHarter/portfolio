@@ -1,12 +1,19 @@
 import Project from "@/components/project";
 
 export const metadata = {
-	title: "Landon Harter - Projects",
+	title: "Landon Harter - Work",
 };
 
 export default function Projects() {
 	return (
 		<main className="flex flex-col gap-6">
+			<Project
+				name="Method Financial"
+				description="Moving to NYC in Summer 2025!"
+				href="https://methodfi.com/"
+				role="Software Engineer Intern"
+				time="2025 - Present"
+			/>
 			<Project
 				name="Kodisc"
 				description="Create stunning animations with AI in seconds."
