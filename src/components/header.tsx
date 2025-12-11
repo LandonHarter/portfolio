@@ -9,6 +9,7 @@ export default function Header() {
 			<nav className="flex items-center justify-end gap-6">
 				<Link href="/projects">projects</Link>
 				<Link href="/stats">stats</Link>
+				<Link href="/resume.pdf" target="_blank">resume</Link>
 			</nav>
 		</header>
 	);

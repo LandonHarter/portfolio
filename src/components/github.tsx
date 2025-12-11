@@ -38,7 +38,7 @@ export default async function GithubHistory({
 		>
 			<div className="flex items-center gap-2">
 				<svg
-					className="h-3 w-3 flex-shrink-0"
+					className="h-3 w-3 shrink-0"
 					width="24"
 					height="24"
 					viewBox="0 0 24 24"
