@@ -4,11 +4,11 @@ export default function Header() {
 	return (
 		<header className="flex w-full items-center justify-between">
 			<Link href="/">
-				<h1 className="text-xl font-semibold md:text-3xl">
+				<h1 className="text-base font-semibold sm:text-lg md:text-3xl">
 					landon harter
 				</h1>
 			</Link>
-			<nav className="flex items-center justify-end gap-6">
+			<nav className="flex items-center justify-end gap-6 text-sm sm:text-base">
 				<Link href="/work">work</Link>
 				<Link href="/stats">stats</Link>
 				<Link href="/resume.pdf" target="_blank">

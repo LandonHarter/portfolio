@@ -14,15 +14,16 @@ export default function Home() {
 			<div className="flex flex-col gap-4">
 				<h3 className="text-2xl font-medium">about me</h3>
 				<p className="w-5/6 text-base opacity-80">
-					i am landon, a software engineer and businessman from richland, mi
-					currently building{" "}
+					i am landon, a software engineer and businessman from
+					richland, mi currently building{" "}
 					<Link
 						href="https://kodisc.com"
 						target="_blank"
 						className="underline"
 					>
 						kodisc.com
-					</Link>{" "} and{" "}
+					</Link>{" "}
+					and{" "}
 					<Link
 						href="https://draftl.com"
 						target="_blank"
@@ -30,6 +31,15 @@ export default function Home() {
 					>
 						draftl.com
 					</Link>
+					, with plans to work at{" "}
+					<Link
+						href="https://methodfi.com/"
+						target="_blank"
+						className="underline"
+					>
+						Method Financial
+					</Link>{" "}
+					in NYC in Summer 2025!
 				</p>
 			</div>
 		</main>
