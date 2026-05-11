@@ -56,7 +56,7 @@ export default function Projects() {
 				/>
 				<Project
 					name="Pullrank"
-					description="Open source reputation (not production, just for fun)."
+					description="Open source Github reputation (not production, just for fun)."
 					href="https://pullrank.dev"
 					role="Solo Developer"
 					time="2026"
