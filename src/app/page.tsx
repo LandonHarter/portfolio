@@ -39,7 +39,7 @@ export default function Home() {
 					>
 						Method Financial
 					</Link>{" "}
-					in NYC in Summer 2025!
+					in NYC in Summer 2026!
 				</p>
 			</div>
 		</main>
