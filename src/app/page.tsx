@@ -31,7 +31,7 @@ export default function Home() {
 					>
 						draftl.com
 					</Link>
-					, with plans to work at{" "}
+					, interning at{" "}
 					<Link
 						href="https://methodfi.com/"
 						target="_blank"
@@ -39,7 +39,7 @@ export default function Home() {
 					>
 						Method Financial
 					</Link>{" "}
-					in NYC in Summer 2026!
+					in NYC in Summer 2026.
 				</p>
 			</div>
 		</main>
