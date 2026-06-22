@@ -55,6 +55,13 @@ export default function Projects() {
 					time="2026"
 				/>
 				<Project
+					name="LWS"
+					description="A local version of AWS, built in Zig."
+					href="https://github.com/LandonHarter/lws"
+					role="Solo Developer"
+					time="2026"
+				/>
+				<Project
 					name="Pullrank"
 					description="Open source Github reputation (not production, just for fun)."
 					href="https://pullrank.dev"
