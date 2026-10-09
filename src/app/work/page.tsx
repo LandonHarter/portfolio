@@ -28,7 +28,7 @@ export default function Projects() {
 					description="Software engineering internship in NYC."
 					href="https://methodfi.com/"
 					role="Software Engineer Intern"
-					time="2026 - Aug 2026"
+					time="May 2026 - Aug 2026"
 				/>
 				<Project
 					name="Opal"
