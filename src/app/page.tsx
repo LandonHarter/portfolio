@@ -38,7 +38,8 @@ export default function Home() {
 						className="underline"
 					>
 						Method Financial
-					</Link>{" "}.
+					</Link>
+					.
 				</p>
 			</div>
 		</main>

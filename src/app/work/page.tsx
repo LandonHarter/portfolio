@@ -10,13 +10,6 @@ export default function Projects() {
 			<section className="flex flex-col gap-6">
 				<h2 className="text-xl font-semibold">Work</h2>
 				<Project
-					name="Method Financial"
-					description="Moving to NYC in Summer 2026!"
-					href="https://methodfi.com/"
-					role="Software Engineer Intern"
-					time="2026 - Present"
-				/>
-				<Project
 					name="Kodisc"
 					description="Create stunning animations with AI in seconds."
 					href="https://kodisc.com"
@@ -29,6 +22,13 @@ export default function Projects() {
 					href="https://draftl.com"
 					role="Founder"
 					time="2024 - Present"
+				/>
+				<Project
+					name="Method Financial"
+					description="Software engineering internship in NYC."
+					href="https://methodfi.com/"
+					role="Software Engineer Intern"
+					time="2026 - Aug 2026"
 				/>
 				<Project
 					name="Opal"
